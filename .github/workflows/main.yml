@@ -69,6 +69,10 @@ jobs:
     
     # Update jsDelivr status    
     - name: Purge CDN
+      env:
+        OVERVIEW_SVG: ${{ secrets.OVERVIEW }}
+        LANGUAGE_SVG: ${{ secrets.LANGUAGE }}
+        
       run: |
         curl $OVERVIEW_SVG
-        curl $LAN_SVG
+        curl $LANGUAGE_SVG
