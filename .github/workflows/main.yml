@@ -70,5 +70,5 @@ jobs:
     # Update jsDelivr status    
     - name: Purge CDN
       run: |
-        curl https://cdn.jsdelivr.net/gh/DejavuMoe/GitHub-Stats@latest/generated/overview.svg
-        curl https://cdn.jsdelivr.net/gh/DejavuMoe/GitHub-Stats@latest/generated/languages.svg
+        curl $OVERVIEW_SVG
+        curl $LAN_SVG
