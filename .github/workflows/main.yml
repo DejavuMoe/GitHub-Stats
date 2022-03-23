@@ -66,3 +66,9 @@ jobs:
         # "echo" returns true so the build succeeds, even if no changed files
         git commit -m 'Update generated files' || echo
         git push
+    
+    # Update jsDelivr status    
+    - name: Purge CDN
+      run: |
+        curl https://cdn.jsdelivr.net/gh/DejavuMoe/GitHub-Stats@latest/generated/overview.svg
+        curl https://cdn.jsdelivr.net/gh/DejavuMoe/GitHub-Stats@latest/generated/languages.svg
