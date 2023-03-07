@@ -72,9 +72,7 @@ jobs:
       env:
         OVERVIEW_SVG: ${{ secrets.OVERVIEW }}
         LANGUAGE_SVG: ${{ secrets.LANGUAGE }}
-        SITEMAP: ${{ secrets.SITEMAP }}
         
       run: |
         curl $OVERVIEW_SVG
         curl $LANGUAGE_SVG
-        curl $SITEMAP
